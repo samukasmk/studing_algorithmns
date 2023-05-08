@@ -1,7 +1,9 @@
 [tool.pytest.ini_options]
 minversion = "7.3"
-addopts = "-s -v --tb=long --cache-clear --flakes --cov=algorithmns --cov=data_structures"
+addopts = "-s -v --tb=long --cache-clear --flakes --rootdir=. --cov --cov=algorithmns --cov=data_structures  --cov-report=html:reports/html_dir"
 testpaths = [
     "tests",
+    "algorithmns",
 ]
 python_files = "tests.py test_*.py *_tests.py"
+pythonpath = "."

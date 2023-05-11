@@ -1,5 +1,13 @@
 # studing_algorithmns
-The purpose of this repository is to show and compare different visions of algorithms and data structures from many know books and good video courses.
+The purpose of this repository is to be my notebook about my studies about algorithms and data structures. 
+
+Showing and comparing different visions from many know books and good video courses.
+
+As the objective is to have a space to store the temporary knowledge, with the fresh results of my
+studies as quickly as possible, do not expect organization in the commits, or the absence of pull requests,
+as the main idea is to centralize the information in a public place like the github cloud,
+so that only after this big gathering of information I can compile learning slides
+for lectures at events and things like that.
 
 ## File Structures
 

@@ -2,7 +2,7 @@ import sys
 from math import log, factorial, ceil
 
 """
-$ python bigO_arithmetic_progression.py.py
+$ python big_o_arithmetic_progression.py.py
 Qtd objects: n | Constant: O(1) | Logarithmic: O(log n) | Linear: O(n) | N-Log-N O(n * log n): | Quadratic: O(n²) | Cubic: O(n³) | Exponential: O(2^n) | Factorial: O(n!)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1              | 1              | 1                     | 1            | 1                     | 1                | 1            | 2                   | 1
@@ -42,7 +42,6 @@ def print_artimetic_table(qtd_objects):
         # format display numbers
         formated_line_progression = []
         for progression in arithmetic_progressions:
-            is_float = None
             # if less then 1 round to 1
             # progression = progression 
             # force int type for float with 0 decimals

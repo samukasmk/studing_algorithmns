@@ -3,12 +3,7 @@ def revert_array_with_while_loop_strategy(numbered_array):
     end_index = len(numbered_array) - 1
 
     while begin_index < end_index:
-        begin_value = numbered_array[end_index]
-        end_value = numbered_array[begin_index]
-
-        numbered_array[begin_index] = begin_value
-        numbered_array[end_index] = end_value
-
+        numbered_array[begin_index], numbered_array[end_index] = numbered_array[end_index], numbered_array[begin_index]
         begin_index += 1
         end_index -= 1
 

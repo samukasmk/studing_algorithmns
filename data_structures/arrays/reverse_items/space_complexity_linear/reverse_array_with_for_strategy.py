@@ -6,13 +6,7 @@ def revert_array_with_for_strategy(nums):
 
     for left_index in range(stop_half_items):
         rigth_index = last_index - left_index
-
-        left_item = nums[left_index]
-        rigth_item = nums[rigth_index]
-
-        nums[left_index] = rigth_item
-        nums[rigth_index] = left_item
-
+        nums[left_index], nums[rigth_index] = nums[rigth_index], nums[left_index]
     return nums
 
 

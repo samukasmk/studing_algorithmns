@@ -2,7 +2,7 @@
 From book: Data Structures and Algorithms with Python
 Developed by: Michael T. Goodrich | Roberto Tamassia | Michael H. Goldwasser
 Chapter: 7.2 - Circularly Linked Lists
-Book link: https://amz.run/6g9I
+Where to buy the book: https://amz.run/6g9I
 """
 
 

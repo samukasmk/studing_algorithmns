@@ -2,7 +2,7 @@
 From book: Data Structures and Algorithms with Python
 Developed by: Kent D. Lee and Steve Hubbard
 Chapter: 4.1. - The PyList Datatype
-Book link: https://amz.run/6g9G
+Where to buy the book: https://www.amazon.com.br/dp/3319130714
 Source code: https://kentdlee.github.io/CS2Plus/build/html/chap4/chap4.html#the-pylist-datatype
 """
 

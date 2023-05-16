@@ -16,7 +16,8 @@ class SamukaLinkedList:
         self.head = None
         self.tail = None
         self.__size = 0
-        self.__append_initial_elements(initial_elements)
+        if initial_elements is not None:
+            self.__append_initial_elements(initial_elements)
 
     ### size features
     @property
@@ -78,22 +79,25 @@ import pytest
 
 
 @pytest.fixture()
+def empty_linked_list():
+    return SamukaLinkedList()
+
+
+@pytest.fixture()
 def linked_list():
-    linked_list = SamukaLinkedList(initial_elements=[1, 'Second element', 3.6])
-    assert linked_list.head.value == 1
-    assert len(linked_list) == 3
-    return linked_list
+    return SamukaLinkedList(initial_elements=[1, 'Second element', 3.6])
 
 
 ### Pytest: Tests
 class TestSamukaLinkedList:
-    def test_empty_list_creation(self):
-        linked_list = SamukaLinkedList(initial_elements=[])
-        assert len(linked_list) == 0
-        assert linked_list.head is None
-        assert linked_list.tail is None
+    def test_empty_list_creation(self, empty_linked_list):
+        assert len(empty_linked_list) == 0
+        assert empty_linked_list.head is None
+        assert empty_linked_list.tail is None
 
     def test_normal_list_creation(self, linked_list):
+        assert linked_list.head.value == 1
+        assert len(linked_list) == 3
         assert linked_list.tail is not None
         assert linked_list.tail.value == 3.6
 
@@ -123,14 +127,30 @@ class TestSamukaLinkedList:
         assert linked_list.head.next.next is not None
         assert linked_list.head.next.next.value == 'Third position'
 
-    @pytest.mark.parametrize("existing_elements", [1, 'Second element', 3.6])
-    def test_get_element_by_index(self, existing_elements, linked_list):
-        for existing_index, existing_element in enumerate(existing_elements):
-            assert linked_list[existing_index] == existing_element
+    @pytest.mark.parametrize("existing_index, existing_element", [(0, 1), (1, 'Second element'), (2, 3.6)])
+    def test_get_existing_element_by_index(self, existing_index, existing_element, linked_list):
+        assert linked_list[existing_index] == existing_element
 
-    def test_get_non_existing_element(self):
+    def test_get_non_existing_element_in_filled_list(self, linked_list):
         with pytest.raises(IndexError):
             linked_list[10000]
+
+    def test_get_non_existing_element_in_empty_list(self, empty_linked_list):
+        with pytest.raises(IndexError):
+            empty_linked_list[1]
+
+    def test_set_existing_element_by_index(self, linked_list):
+        assert linked_list[1] == 'Second element'
+        linked_list[1] = 'Changed element'
+        assert linked_list[1] == 'Changed element'
+
+    def test_set_non_existing_element_in_filled_list(self, linked_list):
+        with pytest.raises(IndexError):
+            linked_list[10000] = 42
+
+    def test_set_non_existing_element_in_empty_list(self, empty_linked_list):
+        with pytest.raises(IndexError):
+            empty_linked_list[1] = 'non existing index'
 
     def test_remove_first_element(self):
         del linked_list[0]

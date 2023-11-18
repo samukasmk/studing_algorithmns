@@ -1,6 +1,0 @@
-coverage
-pyflakes
-pytest
-pytest-cov
-pytest-flakes
-pytest-timeout

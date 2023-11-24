@@ -42,8 +42,11 @@ algorithmns
 ├── recursion
 ├── searching
 │   ├── binary_search
-│   └── linear_search
+│   ├── linear_search
+│   └── substring_search
 └── sorting
+    ├── bogo_sort
+    ├── bubble_sort
     ├── bucket_sort
     ├── counting_sort
     ├── cube_sort
@@ -56,6 +59,7 @@ algorithmns
     ├── shell_sort
     ├── tim_sort
     └── tree_sort
+
 ```
 
 ## Mainly sources:

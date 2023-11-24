@@ -2,10 +2,12 @@
 The purpose of this repository is to be my studies notebooks about algorithms and data structures,
 showing and comparing different visions from many know books and good video courses.
 
-As the objective is to have a space to store the temporary knowledge, with the fresh results of my
-studies as quickly as possible, do not expect organization in the commits, or the absence of pull requests,
-as the main idea is to centralize the information in a public place like the github cloud,
-so that only after this big gathering of information I can compile learning slides
+Respecting the main objective of keeping this space to store temporary knowledge about DSA, with the fresh
+results of my studies as quickly as possible. Do not expect organization in the commits, or the absence of
+pull requests.
+
+As the main idea is to centralize the information in a public place like the github cloud,
+so that only after this big gathering of information I'm compiling learning by slides
 for lectures at events and things like that.
 
 ## 🗃️ File Structures
@@ -94,7 +96,7 @@ A special thanks for who inspired me for create this repository:
 
 ### 👨‍🏫 Udemy course: Algorithms and Data Structures in Python (INTERVIEW Q&A)
 - By: Holczer Balazs
-- Link: https://www.udemy.com/course/algorithms-and-data-structures-in-python/
+- Where to buy: https://www.udemy.com/course/algorithms-and-data-structures-in-python/
 
 ### 👨‍🏫 Coursera course: Algorithms, Part I
 - By: Kevin Wayne and Robert Sedgeck

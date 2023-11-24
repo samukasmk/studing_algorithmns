@@ -1,5 +1,5 @@
 # studing_algorithmns
-The purpose of this repository is to be my notebook about my studies about algorithms and data structures,
+The purpose of this repository is to be my studies notebooks about algorithms and data structures,
 showing and comparing different visions from many know books and good video courses.
 
 As the objective is to have a space to store the temporary knowledge, with the fresh results of my
@@ -110,6 +110,6 @@ A special thanks for who inspired me for create this repository:
 - Data Structures: https://www.youtube.com/watch?v=IhJGJG-9Dx8&list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX
 - Algorithms: https://www.youtube.com/watch?v=KEEKn7Me-ms&list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL
 
-### 🗒️ Github repo: 🧮 Algorithms and Data Structures
+### 🧮 Github repo: Algorithms and Data Structures
 - By: @kelvins and community
 - Link: https://github.com/kelvins/algorithms-and-data-structures

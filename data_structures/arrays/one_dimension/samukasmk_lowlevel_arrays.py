@@ -1,7 +1,7 @@
 from typing import Any, Iterable
 from ctypes import py_object
 
-
+from array import array
 class ExpansibleArray:
 
     def __init__(self, available_slots: int = 10, initial_elements: Iterable | None = None):
@@ -43,7 +43,7 @@ class ExpansibleArray:
         self.__data_structure[index_position] = value
 
     def append(self, value):
-        # expand current available slots
+        # expand slots structure in case of crowding elements
         if self.__total_elements == self.__available_slots:
             self.__resize_data_structure_slots()
 
@@ -78,17 +78,46 @@ if __name__ == '__main__':
     # create data structure
     my_array = ExpansibleArray(available_slots=10, initial_elements=(1, 2, 3))
 
-    print('Get one element: [Complexity O(1) - constant]')
-    print('-> my_array[2] =', my_array[2])
-
-    print('Get all elements: [Complexity O(1) - constant]')
+    print('Get all elements: [Complexity O(n) - Linear]')
     for index in range(10):
         try:
             print(f'-> my_array[{index}] =', my_array[index])
         except IndexError as exc:
             print(f'-> my_array[{index}] = Element not found! [IndexError: {exc}]')
 
-    print('Set element in fourth slot:')
-    my_array[3] = 4
+    print('---')
+    print('Get existing element: [Complexity O(1) - Constant]')
+    print('-> my_array[2] =', my_array[2])
+
+    print('---')
+    print('Set existing element: [Complexity O(1) - Constant]')
+    my_array[2] = 100
+    print('-> my_array[2] =', my_array[2])
+
+    print('---')
+    print('Append new element: [Complexity O(1) - Constant]')
+    my_array.append(200)
     print('-> my_array[3] =', my_array[3])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

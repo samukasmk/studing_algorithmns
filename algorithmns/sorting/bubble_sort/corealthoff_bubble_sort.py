@@ -1,12 +1,10 @@
-def bubble_sort(array):
-    n = len(array)
-
-    for _ in range(n - 1):
-        for i in range(n - 1):
-
-            # swip elements
-            if array[i] > array[i + 1]:
-                array[i], array[i + 1] = array[i + 1], array[i]
+def bubble_sort(a_list):
+    list_length = len(a_list) - 1
+    for i in range(list_length):
+        for j in range(list_length):
+            if a_list[j] > a_list[j + 1]:
+                a_list[j], a_list[j + 1] = a_list[j + 1], a_list[j]
+    return a_list
 
 
 if __name__ == '__main__':
@@ -16,6 +14,7 @@ if __name__ == '__main__':
 
     # sort elements
     bubble_sort(numbers)
+    print(f'Final list: {numbers}')
 
     # check if the original list was sorted
     assert numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100], f"List is not sorted: {numbers}"

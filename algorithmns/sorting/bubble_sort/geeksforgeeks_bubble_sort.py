@@ -21,12 +21,27 @@ def bubbleSort(arr):
             break
 
 
-# Driver code to test above
-if __name__ == "__main__":
-    arr = [64, 34, 25, 12, 22, 11, 90]
+# # Driver code to test above
+# if __name__ == "__main__":
+#     arr = [64, 34, 25, 12, 22, 11, 90]
+#
+#     bubbleSort(arr)
+#
+#     print("Sorted array:")
+#     for i in range(len(arr)):
+#         print("%d" % arr[i], end=" ")
 
-    bubbleSort(arr)
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
 
-    print("Sorted array:")
-    for i in range(len(arr)):
-        print("%d" % arr[i], end=" ")
+    # sort elements
+    bubbleSort(numbers)
+    print(f'Final list: {numbers}')
+
+    # check if the original list was sorted
+    assert numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100], f"List is not sorted: {numbers}"
+
+    # print the sorted list
+    print(f'Sorted list: {numbers}')

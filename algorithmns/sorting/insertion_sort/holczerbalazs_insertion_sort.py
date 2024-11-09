@@ -14,8 +14,23 @@ def insertion_sort(nums):
             j = j - 1
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#
+#     x = [1, -5, 10, 100, -4, 0, 3, 2, 1]
+#     insertion_sort(x)
+#     print(x)
 
-    x = [1, -5, 10, 100, -4, 0, 3, 2, 1]
-    insertion_sort(x)
-    print(x)
+
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
+
+    # sort elements
+    insertion_sort(numbers)
+
+    # check if the original list was sorted
+    assert numbers == [100, 56, 10, 9, 2, 1, 0, -1, -5, -34], f"List is not sorted: {numbers}"
+
+    # print the sorted list
+    print(f'Sorted list: {numbers}')

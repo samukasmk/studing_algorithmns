@@ -1,3 +1,6 @@
+""" Recursive Bubble Sort in Python """
+
+
 def bubble_sort(data, size):
     """
     Implementation of a bubble sort algorithm with recursion.
@@ -17,6 +20,12 @@ def bubble_sort(data, size):
         bubble_sort(data, size - 1)
 
 
+# if __name__ == "__main__":
+#     data = [2, 9, 8, 0, 1, 3, 5, 4, 6, 7]
+#     print(data)
+#     bubble_sort(data, len(data))
+#     print(data)
+
 if __name__ == '__main__':
     # define a list of numbers
     numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
@@ -26,7 +35,7 @@ if __name__ == '__main__':
     bubble_sort(numbers, len(numbers))
 
     # check if the original list was sorted
-    assert numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]
+    assert numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100], f"List is not sorted: {numbers}"
 
     # print the sorted list
     print(f'Sorted list: {numbers}')

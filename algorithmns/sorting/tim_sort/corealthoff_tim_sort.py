@@ -102,19 +102,32 @@ def timSort(arr):
         size = 2 * size
 
 
-# Driver program to test above function
-if __name__ == "__main__":
-    arr = [-2, 7, 15, -14, 0, 15, 0,
-           7, -7, -4, -13, 5, 8, -14, 12]
+# # Driver program to test above function
+# if __name__ == "__main__":
+#     arr = [-2, 7, 15, -14, 0, 15, 0,
+#            7, -7, -4, -13, 5, 8, -14, 12]
+#
+#     print("Given Array is")
+#     print(arr)
+#
+#     # Function Call
+#     timSort(arr)
+#
+#     print("After Sorting Array is")
+#     print(arr)
+#     # [-14, -14, -13, -7, -4, -2, 0, 0,
+#     [5, 7, 7, 8, 12, 15, 15]
 
-    print("Given Array is")
-    print(arr)
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
 
-    # Function Call
-    timSort(arr)
+    # sort elements
+    timSort(numbers)
 
-    print("After Sorting Array is")
-    print(arr)
-    # [-14, -14, -13, -7, -4, -2, 0, 0,
-    [5, 7, 7, 8, 12, 15, 15]
-
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

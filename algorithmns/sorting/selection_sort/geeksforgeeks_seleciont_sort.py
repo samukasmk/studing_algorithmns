@@ -29,13 +29,28 @@ def print_array(arr):
     print()
 
 
-if __name__ == "__main__":
-    arr = [64, 25, 12, 22, 11]
+# if __name__ == "__main__":
+#     arr = [64, 25, 12, 22, 11]
+#
+#     print("Original array: ", end="")
+#     print_array(arr)
+#
+#     selection_sort(arr)
+#
+#     print("Sorted array: ", end="")
+#     print_array(arr)
 
-    print("Original array: ", end="")
-    print_array(arr)
 
-    selection_sort(arr)
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
 
-    print("Sorted array: ", end="")
-    print_array(arr)
+    # sort elements
+    selection_sort(numbers)
+
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

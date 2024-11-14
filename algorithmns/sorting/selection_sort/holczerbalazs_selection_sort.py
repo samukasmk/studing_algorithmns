@@ -20,8 +20,22 @@ def selection_sort(nums):
             nums[index], nums[i] = nums[i], nums[index]
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#
+#     n = [45, 100, 0, 1, -5, -10, 4, 5, 6, 13]
+#     selection_sort(n)
+#     print(n)
 
-    n = [45, 100, 0, 1, -5, -10, 4, 5, 6, 13]
-    selection_sort(n)
-    print(n)
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
+
+    # sort elements
+    selection_sort(numbers)
+
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

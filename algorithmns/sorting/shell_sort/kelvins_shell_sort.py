@@ -28,9 +28,9 @@ def gap_insertion_sort(a_list, start, gap):
         a_list[position] = current_value
 
 
-some_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-shell_sort(some_list)
-print(some_list)
+# some_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+# shell_sort(some_list)
+# print(some_list)
 
 
 def shell(seq):
@@ -50,6 +50,34 @@ def shell(seq):
         inc = 1 if inc == 2 else int(inc * 5.0 / 11)
 
 
-data = [22, 7, 2, -5, 8, 4]
-shell(data)
-print(data)  # [-5, 2, 4, 7, 8, 22]
+# data = [22, 7, 2, -5, 8, 4]
+# shell(data)
+# print(data)  # [-5, 2, 4, 7, 8, 22]
+
+
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
+
+    # sort elements
+    shell_sort(numbers)
+
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")
+
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
+
+    # sort elements
+    shell(numbers)
+
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

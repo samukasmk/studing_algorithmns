@@ -1,3 +1,6 @@
+from algorithmns.sorting.selection_sort.hallisonpaz_selection_sort import quicksort
+
+
 def partition(unsorted_array, first_index, last_index):
     pivot = unsorted_array[first_index]
     pivot_index = first_index
@@ -29,7 +32,22 @@ def quick_sort(unsorted_array, first, last):
         quick_sort(unsorted_array, partition_point+1, last)
 
 
-my_array = [43, 3, 77, 89, 4, 20]
-print(my_array)
-quick_sort(my_array, 0, 5)
-print(my_array)
+# my_array = [43, 3, 77, 89, 4, 20]
+# print(my_array)
+# quick_sort(my_array, 0, 5)
+# print(my_array)
+
+
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
+
+    # sort elements
+    quicksort(numbers, 0, len(numbers)-1)
+
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

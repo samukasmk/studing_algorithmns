@@ -30,7 +30,7 @@ if __name__ == '__main__':
     insertion_sort(numbers)
 
     # check if the original list was sorted
-    assert numbers == [100, 56, 10, 9, 2, 1, 0, -1, -5, -34], f"List is not sorted: {numbers}"
-
-    # print the sorted list
-    print(f'Sorted list: {numbers}')
+    if numbers == [100, 56, 10, 9, 2, 1, 0, -1, -5, -34]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

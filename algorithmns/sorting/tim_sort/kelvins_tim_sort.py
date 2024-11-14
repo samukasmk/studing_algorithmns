@@ -79,8 +79,16 @@ def timsort(data):
         size = 2 * size
 
 
-if __name__ == "__main__":
-    data_to_sort = [99, 15, 23, 0, -9, 1, 45, 2, 10, 15]
-    print("Unsorted data: ", data_to_sort)
-    timsort(data_to_sort)
-    print("Sorted data: ", data_to_sort)
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
+
+    # sort elements
+    timsort(numbers)
+
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

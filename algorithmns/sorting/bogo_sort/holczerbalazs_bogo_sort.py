@@ -26,9 +26,24 @@ class BogoSort:
         return True
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#
+#     # it has O(N!) running time
+#     algorithm = BogoSort([1, -4, 10, 5, 0, 1, 2, 3, 4, 5])
+#     algorithm.sort()
+#     print(algorithm.nums)
 
-    # it has O(N!) running time
-    algorithm = BogoSort([1, -4, 10, 5, 0, 1, 2, 3, 4, 5])
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
+
+    # sort elements
+    algorithm = BogoSort(numbers)
     algorithm.sort()
-    print(algorithm.nums)
+
+    # check if the original list was sorted
+    if algorithm.nums == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {algorithm.nums}')
+    else:
+        print(f"Final is not sorted: {algorithm.nums}")

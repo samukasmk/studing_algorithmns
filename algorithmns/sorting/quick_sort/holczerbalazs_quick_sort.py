@@ -44,10 +44,25 @@ class QuickSort:
         return low
 
 
+# if __name__ == '__main__':
+#
+#     x = [1, -4, 0, 10, 5, 4, 3, 100]
+#
+#     algorithm = QuickSort(x)
+#     algorithm.sort()
+#     print(x)
+
 if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
 
-    x = [1, -4, 0, 10, 5, 4, 3, 100]
-
-    algorithm = QuickSort(x)
+    # sort elements
+    algorithm = QuickSort(numbers)
     algorithm.sort()
-    print(x)
+
+    # check if the original list was sorted
+    if algorithm.data == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {algorithm.data}')
+    else:
+        print(f"Final is not sorted: {algorithm.data}")

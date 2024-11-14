@@ -21,14 +21,28 @@ def gnomesort(lista):
     return lista
 
 
-def main():
-    lista = [-1, 1, 0, -7, 7, -5, 5, 2, -2, 4, -4, 9, -9, -6, 6, -8, 8, -3, 3]
-    # imprime a lista não ordenada
-    print(f"Lista antes de ser ordenada: {lista}")
-    lista = gnomesort(lista)
-    # imprime a lista ordenada
-    print(f"Lista após ordenação com Gnome Sort: {lista}")
+# def main():
+#     lista = [-1, 1, 0, -7, 7, -5, 5, 2, -2, 4, -4, 9, -9, -6, 6, -8, 8, -3, 3]
+#     # imprime a lista não ordenada
+#     print(f"Lista antes de ser ordenada: {lista}")
+#     lista = gnomesort(lista)
+#     # imprime a lista ordenada
+#     print(f"Lista após ordenação com Gnome Sort: {lista}")
+#
+#
+# if __name__ == "__main__":
+#     main()
 
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
 
-if __name__ == "__main__":
-    main()
+    # sort elements
+    gnomesort(numbers)
+
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

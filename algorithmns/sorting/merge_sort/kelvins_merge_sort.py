@@ -41,8 +41,23 @@ def merge_sort(data):
         data_index += 1
 
 
-if __name__ == "__main__":
-    some_list = [9, 1, 7, 6, 2, 8, 5, 3, 4, 0]
-    print("Unsorted list: {}".format(some_list))
-    merge_sort(some_list)
-    print("Sorted list: {}".format(some_list))
+# if __name__ == "__main__":
+#     some_list = [9, 1, 7, 6, 2, 8, 5, 3, 4, 0]
+#     print("Unsorted list: {}".format(some_list))
+#     merge_sort(some_list)
+#     print("Sorted list: {}".format(some_list))
+
+
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
+
+    # sort elements
+    merge_sort(numbers)
+
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

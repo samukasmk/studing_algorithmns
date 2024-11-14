@@ -11,4 +11,19 @@ def quicksort(array):
     greater = [i for i in array[1:] if i > pivot]
     return quicksort(less) + [pivot] + quicksort(greater)
 
-print(quicksort([10, 5, 2, 3]))
+# print(quicksort([10, 5, 2, 3]))
+
+
+if __name__ == '__main__':
+  # define a list of numbers
+  numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+  print(f'Initial list: {numbers}')
+
+  # sort elements
+  quicksort(numbers)
+
+  # check if the original list was sorted
+  if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+    print(f'Sorted list: {numbers}')
+  else:
+    print(f"Final is not sorted: {numbers}")

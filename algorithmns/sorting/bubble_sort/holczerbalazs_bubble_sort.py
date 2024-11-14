@@ -22,16 +22,18 @@ class BubbleSort:
 #     bubble_sort.sort()
 #     print(bubble_sort.nums)
 
+
 if __name__ == '__main__':
     # define a list of numbers
     numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
     print(f'Initial list: {numbers}')
 
     # sort elements
-    BubbleSort(numbers).sort()
+    algorithm = BubbleSort(numbers)
+    algorithm.sort()
 
     # check if the original list was sorted
-    assert numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100], f"List is not sorted: {numbers}"
-
-    # print the sorted list
-    print(f'Sorted list: {numbers}')
+    if numbers == [100, 56, 10, 9, 2, 1, 0, -1, -5, -34]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

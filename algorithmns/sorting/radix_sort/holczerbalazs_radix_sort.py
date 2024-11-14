@@ -34,12 +34,26 @@ class RadixSort:
                 z += 1
 
 
+# if __name__ == '__main__':
+#
+#     n = [5, 3, 10, 12, 9, 8, 20, 100, 325, 1023]
+#     random.shuffle(n)
+#     print(n)
+#     radix_sort = RadixSort(n)
+#     radix_sort.sort()
+#     print(radix_sort.data)
+
 if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
 
-    n = [5, 3, 10, 12, 9, 8, 20, 100, 325, 1023]
-    random.shuffle(n)
-    print(n)
-    radix_sort = RadixSort(n)
-    radix_sort.sort()
-    print(radix_sort.data)
+    # sort elements
+    algorithm = RadixSort(numbers)
+    algorithm.sort()
 
+    # check if the original list was sorted
+    if algorithm.data == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {algorithm.data}')
+    else:
+        print(f"Final is not sorted: {algorithm.data}")

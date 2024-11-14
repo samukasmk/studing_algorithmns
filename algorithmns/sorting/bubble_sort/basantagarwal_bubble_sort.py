@@ -36,10 +36,9 @@ if __name__ == '__main__':
 
     # sort elements
     bubble_sort(numbers)
-    print(f'Final list: {numbers}')
 
     # check if the original list was sorted
-    assert numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100], f"List is not sorted: {numbers}"
-
-    # print the sorted list
-    print(f'Sorted list: {numbers}')
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

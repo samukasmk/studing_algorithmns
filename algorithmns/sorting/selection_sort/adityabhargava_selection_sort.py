@@ -19,4 +19,19 @@ def selectionSort(arr):
       newArr.append(arr.pop(smallest))
   return newArr
 
-print(selectionSort([5, 3, 6, 2, 10]))
+# print(selectionSort([5, 3, 6, 2, 10]))
+
+
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
+
+    # sort elements
+    numbers = selectionSort(numbers)
+
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

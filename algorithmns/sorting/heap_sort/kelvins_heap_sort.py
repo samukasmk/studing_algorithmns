@@ -38,8 +38,23 @@ def heap_sort(data):
         data[parent] = temp
 
 
-if __name__ == "__main__":
-    list_to_sort = [9, 1, 7, 6, 2, 8, 5, 3, 4, 0]
-    print("Unsorted list: {}".format(list_to_sort))
-    heap_sort(list_to_sort)
-    print("Sorted list: {}".format(list_to_sort))
+# if __name__ == "__main__":
+#     list_to_sort = [9, 1, 7, 6, 2, 8, 5, 3, 4, 0]
+#     print("Unsorted list: {}".format(list_to_sort))
+#     heap_sort(list_to_sort)
+#     print("Sorted list: {}".format(list_to_sort))
+
+
+if __name__ == '__main__':
+    # define a list of numbers
+    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    print(f'Initial list: {numbers}')
+
+    # sort elements
+    heap_sort(numbers)
+
+    # check if the original list was sorted
+    if numbers == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+        print(f'Sorted list: {numbers}')
+    else:
+        print(f"Final is not sorted: {numbers}")

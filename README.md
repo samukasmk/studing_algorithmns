@@ -55,8 +55,10 @@ algorithmns
     ├── bogo_sort
     ├── bubble_sort
     ├── bucket_sort
+    ├── comb_sort
     ├── counting_sort
     ├── cube_sort
+    ├── gnome_sort
     ├── heap_sort
     ├── insertion_sort
     ├── merge_sort
@@ -66,6 +68,7 @@ algorithmns
     ├── shell_sort
     ├── tim_sort
     └── tree_sort
+
 
 ```
 

@@ -1,24 +1,33 @@
 # Sorting algorithms
 
+## Complexity notations
 
-| **Sorting Algorithms** |Best case|Average case|Worst case|Space complexity|
-|------------------------|---------|------------|----------|----------------|
-| bogo_sort              |         |            |          |                |
-| bubble_sort            |         |            |          |                |
-| selection_sort         |         |            |          |                |
-| insertion_sort         |         |            |          |                |
-| shell_sort             |         |            |          |                |
-| quick_sort             |         |            |          |                |
-| merge_sort             |         |            |          |                |
-| tim_sort               |         |            |          |                |
-| heap_sort              |         |            |          |                |
-| tree_sort              |         |            |          |                |
-| bucket_sort            |         |            |          |                |
-| counting_sort          |         |            |          |                |
-| radix_sort             |         |            |          |                |
-| cube_sort              |         |            |          |                | 
-| comb_sort              |         |            |          |                |
-| gnome_sort             |         |            |          |                |
+| **Scenarios** | Notation      |
+|---------------|---------------|
+| Best case     | Big Omega (Ω) |
+| Best case     | Big Theta (Θ) |
+| Average case  | Big O         |
+
+## Sorting algorithms complexity 
+
+| **Sorting Algorithms** | Best case   | Average case | Worst case | Space complexity |
+|------------------------|-------------|--------------|------------|------------------|
+| bogo_sort              | Ω()         | Θ()          | O()        | O()              |
+| bubble_sort            | Ω(n)        | Θ(n²)        | O(n²)      | O(1)             |
+| selection_sort         | Ω(n²)       | Θ(n²)        | O(n²)      | O(1)             |
+| insertion_sort         | Ω(n)        | Θ(n²)        | O(n²)      | O(1)             |
+| shell_sort             | Ω(n log(n)) | Θ()          | O()        | O()              |
+| quick_sort             | Ω()         | Θ()          | O()        | O()              |
+| merge_sort             | Ω()         | Θ()          | O()        | O()              |
+| tim_sort               | Ω()         | Θ()          | O()        | O()              |
+| heap_sort              | Ω()         | Θ()          | O()        | O()              |
+| tree_sort              | Ω()         | Θ()          | O()        | O()              |
+| bucket_sort            | Ω()         | Θ()          | O()        | O()              |
+| counting_sort          | Ω()         | Θ()          | O()        | O()              |
+| radix_sort             | Ω()         | Θ()          | O()        | O()              |
+| cube_sort              | Ω()         | Θ()          | O()        | O()              | 
+| comb_sort              | Ω()         | Θ()          | O()        | O()              |
+| gnome_sort             | Ω()         | Θ()          | O()        | O()              |
 
 
 

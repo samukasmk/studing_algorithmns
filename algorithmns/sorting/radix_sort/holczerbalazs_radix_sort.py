@@ -7,8 +7,10 @@ class RadixSort:
 
     def __init__(self, data):
         self.data = data
+        self.operations = 0
 
     def get_digits(self):
+        self.operations += len(self.data)  # max function is O(n) complexity
         return len(str(max(self.data)))
 
     def sort(self):
@@ -24,6 +26,7 @@ class RadixSort:
             # calculate the index of the given bucket
             index = (num // (10 ** d)) % 10
             count_array[index].append(num)
+            self.operations += 1
 
         # we have to consider all the items in the count array (list)
         z = 0
@@ -32,6 +35,7 @@ class RadixSort:
                 # it takes O(N) linear running time complexity - dictionary O(1)
                 self.data[z] = count_array[i].pop(0)
                 z += 1
+                self.operations += 1
 
 
 # if __name__ == '__main__':
@@ -45,7 +49,7 @@ class RadixSort:
 
 if __name__ == '__main__':
     # define a list of numbers
-    numbers = [1, -5, 0, 2, -1, 10, 9, 100, 56, -34]
+    numbers = [5, 3, 10, 12, 9, 8, 20, 100, 325, 1023]
     print(f'Initial list: {numbers}')
 
     # sort elements
@@ -53,7 +57,13 @@ if __name__ == '__main__':
     algorithm.sort()
 
     # check if the original list was sorted
-    if algorithm.data == [-34, -5, -1, 0, 1, 2, 9, 10, 56, 100]:
+    if algorithm.data == [3, 5, 8, 9, 10, 12, 20, 100, 325, 1023]:
         print(f'Sorted list: {algorithm.data}')
     else:
         print(f"Final is not sorted: {algorithm.data}")
+
+    print('\nConsiderations:')
+    print('-> O(n) complexity is:', len(algorithm.data), 'operations.')
+    print('-> O(n)² quadratic complexity is:', len(algorithm.data) ** 2, 'operations.')
+    print('-> Most of sorting algorithms are O(n)² quadratic complexity...')
+    print('-> This algorithm took:', algorithm.operations, 'operations. In other words - O(nk) complexity!')

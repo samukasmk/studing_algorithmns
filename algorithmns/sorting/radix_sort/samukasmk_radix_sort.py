@@ -2,6 +2,7 @@ def radix_sort(numbers):
     len_chars = len(numbers[0])
     operation = 0
     for position in range(-1, -abs(len_chars + 1), -1):
+        # create digit buckets
         bucket = {str(digit): [] for digit in range(0, 10)}
 
         for n in numbers:
